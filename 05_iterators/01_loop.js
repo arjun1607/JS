@@ -7,7 +7,6 @@ for (let index = 0; index < myArray.length; index++) {
 
 // behaviour of break and continue is same as JAVA/CPP
 
-
 let i = 0
 while (i < 10) {
     console.log(i);
