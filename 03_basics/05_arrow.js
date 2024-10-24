@@ -25,8 +25,11 @@ checkThis.arrowFunction();  // {} in node, Window in browser
 // const add = (n1, n2) => {
 //     return n1 + n2
 // }
+
+// when using { } in arrow function, using return keyword is compulsory
+
 // const add = (n1, n2) => n1 + n2
-const addTwo = (n1, n2) => (n1 + n2)   // return is not compulsory 
+const addTwo = (n1, n2) => (n1 + n2)   // return is not used with ( )
 const addObj = (n1, n2) => ({username: "arjun"})
 console.log(addTwo(3, 4));
 
