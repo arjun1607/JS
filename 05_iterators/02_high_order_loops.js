@@ -23,6 +23,11 @@ for(const [key, value] of map){     // destructuring of array
     console.log(key, ':-', value);
 }
 
+for (let pair of map) {
+    var [key, value] = pair;
+    console.log(key + " = " + value);
+}
+
 const myObject = {
     game1: 'NFS',
     game2: 'Spiderman'

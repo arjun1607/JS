@@ -6,13 +6,13 @@ const myObject = {
 }
 
 for (const key in myObject) {
-    console.log(`${key} shortcut is for ${myObject[key]}`);
+    console.log(`${key} shortcut is for ${myObject[key]}`);    // js shortcut is for javascript
 }
 
 
 const programming = ["js", "rb", "py", "java"]
 for (const key in programming) {
-    console.log(key);    // keys in array from 0
+    console.log(key);    // keys in array starts from 0
     // 0
     // 1
     // 2
