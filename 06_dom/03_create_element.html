@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    div.id = Math.round(Math.random()*10 + 1)
+    div.setAttribute("title", "generated title")  // it directly changes the value, Single round trip
+
+    // by using . it will first bring the reference of that value and override it. Basically 2 round trip
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+
+    // Both the ways are 2 round trip for giving text but using .createTextNode is preferred 
+    // div.innerHTML = "chai aur code"
+    const addText =  document.createTextNode("chai and code")
+    div.appendChild(addText)
+
+    document.body.appendChild(div)
+
+
+
+    function generateHTML() {
+        const container = document.createElement('div');
+        // Create 4 divs and append them to the body
+        for (let i = 0; i < 4; i++) {
+            const div = document.createElement('div');
+            container.appendChild(div);
+
+            // Create a ul and append it to the div
+            const ul = document.createElement('ul');
+            div.appendChild(ul);
+
+            // Create 2 li elements and append them to the ul
+            for (let j = 0; j < 2; j++) {
+                const li = document.createElement('li');
+                li.textContent = `Item ${j + 1}`;
+                ul.appendChild(li);
+            }
+        }
+        document.body.appendChild(container)
+    }
+    generateHTML()
+    
+</script>
+</html>

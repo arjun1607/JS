@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(lang) {
+        const li = document.createElement('li');
+        li.innerHTML = `${lang}`   // it is less optimised as it involves parsing the html string
+        document.querySelector('.language').
+            appendChild(li)      // when we do this it has to traverse the whole DOM till end
+        // this would be problem if we have 1000+ li 
+    }
+    addLanguage('python')
+
+    function addOptiLanguage(lang) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage("golang")
+
+
+    // Edit 
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML = "Mojo"
+    const newLi = document.createElement('li')
+    newLi.textContent = "Mojo"
+    secondLang.replaceWith(newLi)
+
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>Typescript</li>'
+
+
+    //Remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+
+</html>
