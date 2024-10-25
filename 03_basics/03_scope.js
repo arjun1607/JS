@@ -48,6 +48,8 @@ console.log(
   "++++++++++++++++++++++++++++++++++ INTERESTING ++++++++++++++++++++++++++++++++++"
 );
 
+// https://medium.com/@shaghayegh-gh/hoisting-in-javascript-faec36c25891
+
 console.log(addOne(5));  // 6
 function addOne(num) {
   return num + 1;
