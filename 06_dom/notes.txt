@@ -1,0 +1,13 @@
+DOM is document object model
+
+Go to browser and in console check -
+console.log(window)  => inside this there is a lot of information
+console.log(window.document)
+
+it is so commonly used that we can directly access using
+console.log(document)
+
+console.log(document.baseURI) 
+console.log(document.links[2])   
+document.getElementById('heading')   // <h1 class="heading">Dom learning on chai snf code</h1>
+document.getElementById('firstHeading').innerHTML = "<h1> arjun </h1>"
