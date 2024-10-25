@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | chai and code</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    console.log(parent);
+    console.log(parent.children);    // it will give HTMLCollection
+    // console.log(parent.children[1].innerHTML);
+    
+    for (let i = 0; i < parent.children.length; i++) {
+        const element = parent.children[i];
+        console.log(element.innerHTML);
+    }
+
+    parent.children[1].style.color = 'red'
+
+    console.log(parent.firstElementChild);  // <div class="day">Monday</div>
+    console.log(parent.lastElementChild);   // <div class="day">Thursday</div>
+
+    // queryselector is expensive operation as DOM is a tree structure which has to be traversed
+    const dayOne = document.querySelector('.day')
+    console.log(dayOne);
+    console.log(dayOne.parentElement);  // it will give complete parent
+    console.log(dayOne.nextElementSibling);   // tuesday
+    console.log(parent.lastElementChild.previousElementSibling);  // Wednesday
+        
+
+    // this give NodeList of size 9 becoz browser behind the scene creates a complex tree structure
+    // next line is also taken as text node
+    console.log(parent.childNodes);
+    // even if we add a comment it is also a node
+    
+    
+</script>
+</html>

@@ -42,6 +42,9 @@ title.innerHTML
 // 'Dom learning on chai and code\n            <span style="display: none;">test text</span>\n        '
 
 
+--------------------------------------------------------------------------------------------------------------
+
+
 // .querySelector it gives u first element
 document.querySelector('h2')  
 document.querySelector('#title')
@@ -80,6 +83,9 @@ liList.forEach((li) => li.style.color = "red")
 // .getElementsByClassName returns a HTMLCollection having all the elements
 const tempClassList = document.getElementsByClassName('list-item')
 
-// it does not have forEach so first convert it to Array
+tempClassList[0]     // accessing like this allowed
+ 
+// it does not have forEach so first convert it to Array to use forEach loop
+// but classic for loop can be used
 const myConvertedArray = Array.from(tempClassList)
 myConvertedArray.forEach((li) => li.style.color = "orange")
