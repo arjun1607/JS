@@ -4,7 +4,22 @@ function multipleBy5(num){
 multipleBy5.power = 2
 console.log(multipleBy5(5));          // 25
 console.log(multipleBy5.power);       // 2
-console.log(multipleBy5.prototype);   // {}
+console.log(multipleBy5.prototype);   // {}   
+console.log(multipleBy5.prototype.constructor)     //[Function: multipleBy5] { power: 2 }
+// When you access the prototype property of a function, you're essentially looking at a plain object. 
+// This object, by default, contains a single property: constructor, which points back to the function itself.
+// You can add properties and methods to this prototype object to be inherited by instances of the function.
+
+// The prototype property is associated with functions, not directly with objects.
+const arr = {}
+console.log(arr.prototype);  // undefined
+// When you create an array, it inherits properties and methods from the Array.prototype. 
+// However, you don't directly access the prototype property to use these methods.
+
+
+
+
+
 
 
 

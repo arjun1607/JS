@@ -17,6 +17,12 @@ String ----> Object -----> null
 
 all the properties available in Object is available in String and Arrays. This is prototypal inheritance
 
+Prototype Chain :-
+When you try to access a property or method on an object, JavaScript follows a process known as the prototype chain:
+Direct Property Check: It first checks if the property or method exists directly on the object.
+Prototype Chain: If not found, it checks the object's prototype.
+Prototype Chain Continues: This process continues up the prototype chain until the property or method is found 
+or the end of the chain is reached.
 
 
 
