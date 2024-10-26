@@ -90,7 +90,7 @@ async function consumePromiseFive() {
 // if promise is rejected, we can get error. Need to use try catch block inside async function
 consumePromiseFive()
 
-// if we dont use async-await in function, it will first print pending Promise then print hello
+// if we dont use async-await in function, it will first print Promise {<pending>}, then print hello
 // but after using async-await hello is printed first and then response from promise
 console.log("hello");
 
@@ -105,15 +105,3 @@ async function consumePromiseFiveWithTryCatch() {
     }
 }
 consumePromiseFiveWithTryCatch()   
-
-
-
-
-
-
-
-
-
-
-
-
