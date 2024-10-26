@@ -1,0 +1,21 @@
+JS is neither functional or object oriented, it is prototype based language
+classes are syntactic sugar in JS
+
+## OOP - its a programming paradigm (style and structure of writing code)
+
+Object - collection of properties and methods
+
+why use OOP - to avoid mess up code / spaghetti code
+
+## parts of OOP -
+object literal - {}
+constructor function
+prototypes
+classes
+instances (new, this)
+
+## 4 pillars
+abstraction - like fetch()
+encapsulation 
+inheritance
+polymorphism

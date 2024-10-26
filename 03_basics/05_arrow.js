@@ -28,6 +28,8 @@ checkThis.arrowFunction();  // {} in node, Window in browser
 
 // when using { } in arrow function, using return keyword is compulsory
 
+// don't use ; when writing single line arrow fn
+
 // const add = (n1, n2) => n1 + n2
 const addTwo = (n1, n2) => (n1 + n2)   // return is not used with ( )
 const addObj = (n1, n2) => ({username: "arjun"})
@@ -43,6 +45,8 @@ console.log("-------------------------------------------------------------------
 
 const anObject = {
     aValue: "example value",
+    arrowThis : () => console.log(this),    // it will print {}
+    
     aMethod: function() {
         console.log("aMethod", this);
         const arrow = () => { console.log("arrow", this); }
