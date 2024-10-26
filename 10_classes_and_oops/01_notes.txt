@@ -1,7 +1,28 @@
 JS is neither functional or object oriented, it is prototype based language
+which means when we try to read a property from a prototype and its missing, 
+then JS try find it in upward layers(prototype) from parents to grandparents and so on till it not find null value
+
+'this' keyword and arrow functions works on the prototype behaviour
+due to prototype we get access/working of 'new' keyword, classes, 'this' keyword and prototypal inheritance
+
+Ex- inside Array we see [[Prototype]]:Array(0), then inside which we see [[Prototype]]:Object inside which further we 
+dont get [[Prototype]] but getters and setters __proto__
+
+
+at the end everything is Object in JS
+
+  prototype redirect to Object    ................ prototype of Object is null
+Array -----> Object -----> null
+String ----> Object -----> null
+
+all the properties available in Object is available in String and Arrays. This is prototypal inheritance
+
+
+
+
 classes are syntactic sugar in JS
 
-## OOP - its a programming paradigm (style and structure of writing code)
+OOP - its a programming paradigm (style and structure of writing code)
 
 Object - collection of properties and methods
 
