@@ -1,7 +1,9 @@
 class User{
     constructor(email, password){
         this.email = email;
-        this.password = password   
+        console.log("1");
+        
+        this.password = password   // it will call setter
     }
 
     // if defined getter, there must be setter and vice versa
@@ -12,6 +14,8 @@ class User{
     }
 
     set password(value){
+        console.log("2");
+        
         // Infinite loop as this.password = value → calls set password(value) → this.password = value → calls set password(value) → and so on.
         // this.password = value   
 
@@ -20,3 +24,6 @@ class User{
 }
 
 const hitesh = new User("arjun@gmail.com", "123")
+console.log(hitesh.password)
+console.log(hitesh)   // password is private varible so it is not visible, its not part of object context
+// User { email: 'arjun@gmail.com', _password: '123' }
