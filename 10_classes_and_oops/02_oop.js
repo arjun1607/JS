@@ -59,6 +59,7 @@ const user2 = new User("chaiandcode", 11, false)
 console.log(user1);
 console.log(user2.constructor);      // [Function: User]
 console.log(user1 instanceof User);  // true
+// we can see abstraction and encapsulation in above example
 
 
 // Notes:- 
