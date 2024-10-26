@@ -1,18 +1,18 @@
 // ES6
 
 class User {
-    constructor(username, email, password){
+    constructor(username, email, password) {
         this.username = username
         this.email = email
         this.password = password
     }
 
     // these are called method inside class, not function
-    encryptPassword(){
+    encryptPassword() {
         return `${this.password}abc`
     }
 
-    changeUsername(){
+    changeUsername() {
         return `${this.username.toUpperCase()}`
     }
 }
@@ -30,8 +30,8 @@ function User2(username, email, password) {
     this.password = password
 }
 
-User2.prototype.encryptPassword = function(){
+User.prototype.encryptPassword = function () {
     return `${this.password}abc`
 }
-const tea = new User2("tea", "tea@gmail.com", "221")
-console.log(tea.encryptPassword());
+const tea = new User("tea", "tea@gmail.com", "221")
+console.log(tea.changeUsername());
