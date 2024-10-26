@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    class React {
+        constructor(server) {
+            this.library = "React"
+            this.server = server
+
+            // any object created will be used to do this
+            document.querySelector('button').addEventListener('click', this.handleClick.bind(this))
+        }
+
+        // Requirement :- as soon as page load, create an object on React. We should have reference of button and
+        // whenever button is clicked some function handleClick should be called which will message "Form Submitted"
+        handleClick() {
+            console.log("Form Submitted");
+            console.log(this);   // without bind it will print button element as it was called but button
+            //React {library: 'React', server: 'localhost'}    with bind
+        }
+    }
+
+    const app = new React("localhost")
+</script>
+
+</html>
