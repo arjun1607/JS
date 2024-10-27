@@ -7,6 +7,8 @@
 </head>
 <body>
     <h2>Amazing image</h2>
+    <button onclick="alert('button clicked')">Click Me</button>
+    <button onclick="greet()">Click Me</button>
     <div>
         <ul id="images">
             <li><img width="200px" id="photoshop"
@@ -28,6 +30,9 @@
         </ul>
 </body>
 <script>
+        function greet(){
+                alert("hello")
+        }
         // JS is sequentially run language
         // do not inject event in html like onclick="alert('owl')" because it will create problem when application scale up
         // In react, it is scalable code so there it is OK
